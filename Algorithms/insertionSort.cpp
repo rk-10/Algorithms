@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <iostream>
 
-void insertionSort(int arr[], int size) {
+void insertionSort(int arr[], int size, bool asc) {
     for(int i = 0; i < size; i++){
         std::cout << arr[i];
     }
@@ -19,9 +19,16 @@ void insertionSort(int arr[], int size) {
         key = arr[i];
         j = i - 1;
         //inserting the key
-        while(j >= 0 && arr[j] > key){
-            arr[j + 1] = arr[j];
-            j--;
+        if(asc == true) {
+            while(j >= 0 && arr[j] > key){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+        } else {
+            while(j >= 0 && arr[j] < key){
+                arr[j + 1] = arr[j];
+                j--;
+            }
         }
         arr[j + 1] = key;
     }
@@ -33,9 +40,17 @@ void insertionSort(int arr[], int size) {
     }
 }
 
+
 int main(int argc, const char * argv[]) {
     int ar[] = {1,7,2,5,4,3,6};
-    insertionSort(ar, 7);
+    //Ascending order
+    insertionSort(ar, 7, 1);
+    
+    std::cout << "\n";
+    
+    //Descending order
+    insertionSort(ar, 7, 0);
+    
     return 0;
 }
 
