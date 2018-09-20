@@ -41,17 +41,17 @@ void insertionSort(int arr[], int size, bool asc) {
 }
 
 
-int main(int argc, const char * argv[]) {
-    int ar[] = {1,7,2,5,4,3,6};
-    //Ascending order
-    insertionSort(ar, 7, 1);
-    
-    std::cout << "\n";
-    
-    //Descending order
-    insertionSort(ar, 7, 0);
-    
-    return 0;
-}
+//int main(int argc, const char * argv[]) {
+//    int ar[] = {1,7,2,5,4,3,6};
+//    //Ascending order
+//    insertionSort(ar, 7, 1);
+//
+//    std::cout << "\n";
+//
+//    //Descending order
+//    insertionSort(ar, 7, 0);
+//
+//    return 0;
+//}
 
 
